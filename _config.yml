@@ -26,19 +26,19 @@ social:
 seo:
   title:       "Example Hacks | 5/6 August 2016"
   description: "This is a sample hackathon website that you can use by following instructions on GitHub."
-  image:       "https://prime.mlh.io/img/logos/mlh-prime-color.svg"
+  image:       "http://www.humboldt.edu/sites/default/files/styles/large-responsive/public/slideshow/hike.jpg?itok=G1ew1nFN"
 
 # Event information.
 event:
   name:        "Example Hacks"
-  description: "This is a sample hackathon website that you can use by following instructions on GitHub."
+  description: "Max's example site"
   date:        "5 & 6 August 2016"
   location:    "Holmdel, NJ, United States"
 
   trust_badge:
-    year:   "2017"  # season year
-    region: "eu"    # "na" or "eu"
-    color:  "white" # "white", "black", "gray", "red", "blue" or "yellow"
+    year:   "2018"  # season year
+    region: "na"    # "na" or "eu"
+    color:  "red" # "white", "black", "gray", "red", "blue" or "yellow"
 
   hero:
     links:
