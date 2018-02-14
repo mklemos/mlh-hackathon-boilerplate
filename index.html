@@ -1,46 +1,388 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<title>SF Hacks</title>
 
-{% include hero.html %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="domain-verification" content="">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="theme-color" content="#ffffff">
+</head>
 
-<section class="about">
-  <div class="container">
-    <div class="col-xs-12 col-sm-10 col-sm-offset-1 text-center">
-      {{ site.event.about.description | markdownify }}
-    </div>
-  </div>
-</section>
+<body>
+    <header class="site-header">
+        <div class="container-wide">
+            <h1 class="logo" itemscope itemtype="http://schema.org/Organization">
+                <a href="/" itemprop="url">
+                    <span class="h2">
+                        <span class="light-header2">sf</span>
+                        <span class="bold-header2">hacks</span>
+                    </span>
+                </a>
+            </h1>
+            <div class="site-header-panel">
+                <nav class="site-navigation">
+                    <ul class="site-navigation-list">
 
-<section class="info">
-  <div class="container">
-    <div class="items row">
-      {% for section in site.event.info.sections %}
-        <div class="col-xs-12 col-sm-4 text-center">
-          <div class="item">
-            <img src="{{ section.image }}" />
-            <h1>{{ section.title }}</h1>
-            <p>{{ section.description }}</p>
-          </div>
+                        <li>
+                            <a href="">HOME</a>
+                        </li>
+                        <li>
+                            <a href="#faq">FAQ</a>
+                        </li>
+                        <li>
+                            <a href="#sponsorus">Sponsors</a>
+                        </li>
+                        <li>
+                            <a href="#schedule">Schedule</a>
+                        </li>
+                        <li>
+                            <a href="old-website/index.html">2017 Website</a>
+                        </li>
+
+                    </ul>
+                </nav>
+
+            </div>
+
+            <!-- 
+        <div class="site-header-cta">
+            <a class="btn" href="/register/">get tickets<span></span></a>
+        </div> -->
         </div>
-      {% endfor %}
-    </div>
-  </div>
-</section>
+    </header>
 
-<section class="faq">
-  <div class="container">
-    <h1 class="text-center">FAQ</h1>
-    <div class="row">
-      <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-        {% for item in site.event.faq %}
-        <div class="question col-xs-12 col-sm-12">
-          <h2>{{ item.question }}</h2>
-          <hr>
-          {{ item.answer | markdownify }}
+
+
+    <main id="content" class="main page-content fade-in" aria-label="Content">
+        <!-- <a id="mlh-trust-badge" href="https://mlh.io/seasons/na-2018/events?utm_source=na-2018&utm_medium=TrustBadge&utm_campaign=na-2018&utm_content=blue"
+                    target="_blank">
+                    <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/blue.svg" alt="Major League Hacking 2017 Hackathon Season"
+                        style="width:100%">
+                </a> -->
+
+
+        <header class="universe-intro universe" data-detect-viewport="">
+            <a id="mlh-trust-badge" style="position:absolute;top:0px;right:60px;max-width:100px;width:10%;min-width: 60px;display:block;"
+                href="https://mlh.io/seasons/na-2018/events" target="_blank">
+                <img src="https://s3.amazonaws.com/logged-assets/trust-badge/2018/gray.svg" alt="Major League Hacking 2017 Hackathon Season"
+                    style="width:100%">
+            </a>
+            <div id="Clouds">
+                <div class="Cloud Background1"></div>
+                <div class="Cloud Background2"></div>
+                <div class="Cloud Background1"></div>
+                <div class="Cloud Background2"></div>
+                <div class="Cloud Background1"></div>
+                <div class="Cloud Background2"></div>
+                <div class="Cloud Background2"></div>
+                <div class="Cloud Background1"></div>
+                <div class="Cloud Background2"></div>
+                <div class="Cloud Background2"></div>
+            </div>
+
+            <div class="night">
+                <div class="stars">
+                    <div id='star1'></div>
+                    <div id='star2'></div>
+                    <div id='star3'></div>
+                </div>
+                <div class="citynight1"></div>
+                <div class="citynight2"></div>
+                <div class="content">
+                    <a class="dayopen" href="javascript:void(0)" data-target="day">
+                        <!--       <i class="fa fa-moon-o"></i> -->
+                    </a>
+                </div>
+            </div>
+
+            <div id="day" class="day" style="display: none;">
+                <div class="cityday1"></div>
+                <div class="cityday2"></div>
+                <div class="content">
+                    <a class="dayclose" href="javascript:void(0)" data-target="night">
+                        <!--       <i class="fa fa-sun-o"></i> -->
+                    </a>
+                </div>
+            </div>
+            <div class="container text-white text-center">
+                <div class="text-group universe-intro__content">
+                    <figure class="universe-logo-wrap" data-animate-in="up">
+                        <!-- <div id="clouds2">
+                            <div class="cloud1"></div>
+                            <div class="cloud2"></div>
+                            <div class="cloud3"></div>
+                        </div> -->
+                        <img class="universe-logo" src="images/Logo.svg" alt="GitHub Universe Logo - full" />
+                        <!-- <div id="clouds">
+                            <div class="cloud1"></div>
+                            <div class="cloud2"></div>
+                            <div class="cloud3"></div>
+                        </div> -->
+
+
+
+                        <span class="h1">sf hacks</span>
+
+                    </figure>
+                    <div class="text-group2">
+                        <p>
+                            <span class="h3" data-animate-in="up" data-animate-in-delay="600">March 17 - 18, 2018</span>
+                            <a style="text-decoration: none" href="https://www.google.com/maps/place/Annex+1/@37.7264951,-122.4843815,17z/data=!3m1!4b1!4m5!3m4!1s0x808f7da51ff323d3:0x74d61cd2d66d4dbb!8m2!3d37.7264951!4d-122.4821928">
+                                <span class="h3" data-animate-in="up" data-animate-in-delay="700">Student Life Events Center</span>
+                                <span class="h3" data-animate-in="up" data-animate-in-delay="800">San Francisco State University</span>
+                            </a>
+                        </p>
+                    </div>
+                    <div class="text-group__ft" data-animate-in="up" data-animate-in-delay="900">
+                        <a class="btn" href="https://sfhacks1.typeform.com/to/edyVZr">APPLY</a>
+                        <a class="btn" href="https://sfhacks1.typeform.com/to/Pltdw8">MENTOR</a>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <div class="stars"></div>
+            <div class="stars-lg"></div>
+            <figure class="shooting-star">
+                <img src="https://githubuniverse.com/assets/img/universe/shapes/shooting-star.svg" alt="shooting star" />
+            </figure>
+            <figure class="shooting-star-right">
+                <img src="https://githubuniverse.com/assets/img/universe/shapes/shooting-star.svg" alt="shooting star" />
+            </figure> -->
+
+
+        </header>
+
+        <div class="container-full text-white text-center gradient-background" id="faq">
+            <div class="text-group">
+                <figure class="universe-logo-wrap" data-animate-in="up">
+                    <span class="h1">
+                        <span class="bold-header">FAQ</span>
+                    </span>
+                </figure>
+                <div class="container-wide">
+                    <div class="row">
+                        <div class="row">
+                            <div class="six columns">
+                                <h3>WHAT IS A HACKATHON?</h3>
+                                <p>A hackathon is where you turn your crazy ideas into real stuff. Hundreds of hackers from
+                                    across California will gather and build something they're passionate about. You take
+                                    care of building. We'll take care of you.</p>
+                            </div>
+                            <div class="six columns">
+                                <h3>WHAT IS MAJOR LEAQUE HACKING?</h3>
+                                <p>Major League Hacking (MLH) is the official student hackathon league. SF Hacks is an official
+                                    MLH Member Event, so that means we follow the
+                                    <a id="mlh-link" href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf" target="_blank">
+                                        <strong>MLH Code Of Conduct</strong>
+                                    </a>. You authorize us to share certain application/registration information for event administration,
+                                    ranking, MLH administration, pre and post-event informational e-mails, and occasional
+                                    messages MLH Member Event, so that means we follow the
+                                    <a id="mlh-link" href="https://mlh.io/privacy" target="_blank">
+                                        <strong>MLH Privacy Policy</strong>
+                                    </a>. You authorize us to about hackathons in line with the MLH Privacy Policy.</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="six columns">
+                                <h3>HOW MUCH DOES IT COST?</h3>
+                                <p>SF Hacks is free for all admitted participants. We’ll have WiFi, food, workshops, and awesome
+                                    swag during the entire 24 hours you’ll be with us.</p>
+                            </div>
+                            <div class="six columns">
+                                <h3>WHAT IF I DON'T HAVE A TEAM?</h3>
+                                <p>The hacker ethos is all about teamwork. If you don’t have a teammate, we’ll hold a team-formation
+                                    workshop where you can meet your new best friend. Also,
+                                    <strong id="mlh-link">4 people per team</strong> is the limit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="six columns">
+                                <h3>WHO CAN ATTEND?</h3>
+                                <p>SF Hacks is open to all majors. Whether you’re a budding ethnic studies, cinema, or computer
+                                    science major, we want you to be here. Be prepared to learn, brainstorm, and build amazing
+                                    software/hardware. Throughout the hackathon, we’ll be holding workshops where students
+                                    can learn how to use various tools in developing websites and apps.</p>
+                            </div>
+                            <div class="six columns">
+                                <h3>WHAT CAN I BRING?</h3>
+                                <p>Your Student ID card, laptop, Desktop, and anything else you need to assist in your project.</p>
+                            </div>
+                            <div class="six columns">
+                                <h3>WHAT IF I HAVE MORE QUESTIONS?</h3>
+                                <p>Please feel free to send us a message over on Facebook, Twitter, or send us an email at
+                                    <strong id="mlh-link">team@sfhacks.io.</strong>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
+
+        <div class="container text-white text-center" id="sponsorus">
+            <div class="text-group">
+                <figure class="universe-logo-wrap" data-animate-in="up">
+                    <span class="h1">
+                        <span class="bold-header3">SPONSORS</span>
+                    </span>
+                </figure>
+
+                <div class="gradient-border" id="box">
+                    <div class="container-wide" data-animate-in="up">
+
+
+                        <br>
+                        <img src="images/macy_logo.png" alt="Macy's" style="width:75%">
+                        <img id="twilio-logo" src="images/twilio_RedLogo.jpg" alt="twilio">
+                        <br>
+                        <div class="row">
+                            <div class="six columns">
+                                <img id="he-logo" src="images/HE_logo.png" alt="Hackerearth">
+                            </div>
+                            <div class="six columns">
+                                <img id="bsee-logo" src="images/bugsee-logo.png" alt="Bugsee">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="six columns">
+                                <img id="dash-logo" src="images/dash_logo.png" alt="dash">
+                            </div>
+                            <div class="six columns">
+                                <img id="soylent-logo" src="images/soylent-logo.png" alt="soylent">
+                            </div>
+                        </div>
+
+
+
+
+
+                        <br>
+                        <p>
+                            <span class="h3" data-animate-in="up" data-animate-in-delay="600">If you're interested in sponsoring</span>
+                            <span class="h3" data-animate-in="up" data-animate-in-delay="700">Contact Us</span>
+                            <span class="h3" data-animate-in="up" data-animate-in-delay="800">
+                                <a href="mailto:sponsors@sfhacks.io">sponsors@sfhacks.io</a>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Schedule -->
+
+        <div class="container-full text-white text-center gradient-background" id="schedule">
+            <div class="text-group">
+                <figure class="universe-logo-wrap in-view" data-animate-in="up">
+                    <span class="h1">
+                        <span class="bold-header" data-animate-in="up">Schedule</span>
+                    </span>
+                </figure>
+            </div>
+
+            <!-- Schedule Text -->
+            <ul class="main" data-animate-in="up" data-animate-in-delay="300">
+                <li class="date">
+                    <h3>March 17</h3>
+                    <p>Day 1</p>
+                </li>
+                <li class="events">
+                    <ul class="events-detail">
+                        <li>
+
+                            <span class="event-time">9:00 AM - </span>
+                            <span class="event-name">Check In</span>
+                            <br />
+
+
+                        </li>
+
+                        <li>
+
+                            <span class="event-time">11:00 AM - </span>
+                            <span class="event-name">Opening Ceremony</span>
+                            <br />
+
+                        </li>
+
+                        <li>
+
+                            <span class="event-time">12:00 PM - </span>
+                            <span class="event-name">Lunch / Hacking Begins </span>
+                            <br />
+
+                        </li>
+
+                        <li>
+
+                            <span class="event-time">7:00 PM - </span>
+                            <span class="event-name">Dinner</span>
+                            <br />
+
+                        </li>
+                    </ul>
+
+
+                </li>
+
+
+
+                <li class="date">
+                    <h3>March 18</h3>
+                    <p>Day 2</p>
+                </li>
+                <li class="events cf">
+                    <ul class="events-detail">
+                        <li>
+
+                            <span class="event-time">8:00 AM - </span>
+                            <span class="event-name">Breakfast</span>
+                            <br />
+
+                        </li>
+
+                        <li>
+
+                            <span class="event-time">12:00 PM - </span>
+                            <span class="event-name">Hacking Ends / Judging Begins</span>
+                            <br />
+
+                        </li>
+
+                        <li>
+
+                            <span class="event-time">3:00 PM - </span>
+                            <span class="event-name">Awards / Closing Ceremony</span>
+                            <br />
+
+                        </li>
+                    </ul>
+
+
+                </li>
+
+            </ul>
+        </div>
+
+        <span class="screen"></span>
+        <div class="mobile-menu-trigger">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <script src="https://githubuniverse.com/assets/js/universe/jquery.js"></script>
+        <script src="js/cloud.js"></script>
+        <script src="https://githubuniverse.com/assets/js/universe/main.js" async></script>
+</body>
+
+</html>
